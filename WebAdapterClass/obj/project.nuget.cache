@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "HI4CQFHf1VM=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Ascendion\\Documents\\ContosoAir_Automation\\WebAdapterClass\\WebAdapterClass.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Ascendion\\.nuget\\packages\\selenium.support\\4.35.0\\selenium.support.4.35.0.nupkg.sha512",
+    "C:\\Users\\Ascendion\\.nuget\\packages\\selenium.webdriver\\4.35.0\\selenium.webdriver.4.35.0.nupkg.sha512"
+  ],
+  "logs": []
+}
