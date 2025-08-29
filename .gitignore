@@ -1,2 +1,6 @@
-.vs
-*.vsidx
+bin/
+obj/
+*.user
+.vs/
+*.suo
+*.swp
