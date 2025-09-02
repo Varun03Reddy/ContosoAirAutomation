@@ -1,10 +1,9 @@
-﻿
-
-using InterfaceClass;
+﻿using InterfaceClass;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 using System;
 using System.Threading;
-using OpenQA.Selenium.Support.UI;
+using Utilities;
 
 namespace WebAdapterClass
 {
@@ -29,61 +28,42 @@ namespace WebAdapterClass
         /// <summary>
         /// Logs in to the ContosoAir website using the provided username and password.
         /// </summary>
-        /// <param name="username">The username to log in.</param>
-        /// <param name="password">The password to log in.</param>
         public void Login(string username, string password)
         {
-            driver.Navigate().GoToUrl("http://localhost:3000/");
+            driver.Navigate().GoToUrl(ConfigManager.GetAppUrl());
             driver.Manage().Window.Size = new System.Drawing.Size(1296, 688);
-            driver.FindElement(By.LinkText("Login")).Click();
-            driver.FindElement(By.Id("username")).SendKeys(username);
-            driver.FindElement(By.Id("password")).SendKeys(password);
-            driver.FindElement(By.CssSelector(".btn")).Click();
+
+            SeleniumHelpers.ClickElement(driver, By.LinkText("Login"));
+            SeleniumHelpers.EnterText(driver, By.Id("username"), username);
+            SeleniumHelpers.EnterText(driver, By.Id("password"), password);
+            SeleniumHelpers.ClickElement(driver, By.CssSelector(".btn"));
         }
 
         /// <summary>
         /// Selects flight details including departure and arrival airports, 
         /// departure and return dates, and the number of passengers.
         /// </summary>
-        /// <param name="from">The departure airport.</param>
-        /// <param name="to">The arrival airport.</param>
-        /// <param name="departureDate">The departure date.</param>
-        /// <param name="passengers">The number of passengers.</param>
-        /// <param name="returnDate">The return date.</param>
         public void SelectFlightDetails(string from, string to, DateTime departureDate, int passengers, DateTime returnDate)
         {
-            driver.FindElement(By.LinkText("Book")).Click();
+            SeleniumHelpers.ClickElement(driver, By.LinkText("Book"));
 
-            // Select Departure Airport
-            var fromDropdown = new SelectElement(driver.FindElement(By.Id("fromCode")));
-            fromDropdown.SelectByText(from);   // or SelectByValue(from)
-            Thread.Sleep(2000);
+            SeleniumHelpers.SelectDropdownByText(driver, By.Id("fromCode"), from);
+            Thread.Sleep(1000);
+            SeleniumHelpers.SelectDropdownByText(driver, By.Id("toCode"), to);
+            Thread.Sleep(1000);
 
-            // Select Arrival Airport
-            var toDropdown = new SelectElement(driver.FindElement(By.Id("toCode")));
-            toDropdown.SelectByText(to);   // or SelectByValue(to)
-            Thread.Sleep(2000);
+            // Departure Date
+            SeleniumHelpers.ClickElement(driver, By.Id("dpa"));
+            var departureCell = WaitHelper.WaitForElement(driver, By.XPath($"//td[contains(text(), '{departureDate.Day}')]"));
+            departureCell.Click();
 
+            // Passengers
+            SeleniumHelpers.SelectDropdownByText(driver, By.Id("passengers"), passengers.ToString());
 
-            // Select Departure Date (with WebDriverWait)
-            driver.FindElement(By.Id("dpa")).Click();
-            var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
-            var departureDateCell = wait.Until(drv =>
-                drv.FindElement(By.XPath($"//td[contains(text(), '{departureDate.Day}')]"))
-            );
-            departureDateCell.Click();
-
-            // Select Passengers
-            driver.FindElement(By.Id("passengers")).Click();
-            var passengersDropdown = driver.FindElement(By.Id("passengers"));
-            passengersDropdown.FindElement(By.XPath($"//option[. = '{passengers}']")).Click();
-
-            // Select Return Date (with WebDriverWait)
-            driver.FindElement(By.Id("dpb")).Click();
-            var returnDateCell = wait.Until(drv =>
-                drv.FindElement(By.XPath($"//td[contains(text(), '{returnDate.Day}')]"))
-            );
-            returnDateCell.Click();
+            // Return Date
+            SeleniumHelpers.ClickElement(driver, By.Id("dpb"));
+            var returnCell = WaitHelper.WaitForElement(driver, By.XPath($"//td[contains(text(), '{returnDate.Day}')]"));
+            returnCell.Click();
         }
 
         /// <summary>
@@ -91,12 +71,12 @@ namespace WebAdapterClass
         /// </summary>
         public void BookFlight()
         {
-            driver.FindElement(By.CssSelector(".btn-md")).Click();
-            driver.FindElement(By.CssSelector(".row:nth-child(3) .block-flights-results-list-item:nth-child(2) .big-blue-radio")).Click();
-            driver.FindElement(By.CssSelector(".btn")).Click();
-            driver.FindElement(By.CssSelector(".btn:nth-child(5)")).Click();
-            driver.FindElement(By.CssSelector(".block-booking-title")).Click();
-            driver.FindElement(By.CssSelector(".block-booking-passenger")).Click();
+            SeleniumHelpers.ClickElement(driver, By.CssSelector(".btn-md"));
+            SeleniumHelpers.ClickElement(driver, By.CssSelector(".row:nth-child(3) .block-flights-results-list-item:nth-child(2) .big-blue-radio"));
+            SeleniumHelpers.ClickElement(driver, By.CssSelector(".btn"));
+            SeleniumHelpers.ClickElement(driver, By.CssSelector(".btn:nth-child(5)"));
+            SeleniumHelpers.ClickElement(driver, By.CssSelector(".block-booking-title"));
+            SeleniumHelpers.ClickElement(driver, By.CssSelector(".block-booking-passenger"));
         }
 
         /// <summary>
@@ -104,7 +84,7 @@ namespace WebAdapterClass
         /// </summary>
         public void Close()
         {
-            driver.Close();
+            driver.Quit();
         }
     }
 }

@@ -18,12 +18,18 @@ namespace WebAdapterClass
             driver = webDriver ?? throw new ArgumentNullException(nameof(webDriver));
         }
 
+        /// <summary>
+        /// Navigate to the application URL
+        /// </summary>
         public void NavigateToUrl(string url)
         {
             driver.Navigate().GoToUrl(url);
             driver.Manage().Window.Maximize();
         }
 
+        /// <summary>
+        /// Login to the application
+        /// </summary>
         public void PerformLogin(string username, string password)
         {
             if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
@@ -35,6 +41,9 @@ namespace WebAdapterClass
             driver.FindElement(By.CssSelector(".btn")).Click();
         }
 
+        /// <summary>
+        /// Book a flight
+        /// </summary>
         public void BookFlight()
         {
             driver.FindElement(By.LinkText("Book")).Click();
@@ -65,36 +74,48 @@ namespace WebAdapterClass
             driver.FindElement(By.CssSelector(".btn:nth-child(5)")).Click();
         }
 
+        /// <summary>
+        /// Check passenger name (matches interface exactly)
+        /// </summary>
         public void checkPassengerName()
         {
             BookFlight(); // Reuse booking logic
-            // (You may want to extract actual passenger name element here and assert it in tests)
+            // TODO: Extract actual passenger name element for validation
         }
 
+        /// <summary>
+        /// Check cancel booking (matches interface exactly)
+        /// </summary>
         public void checkCancelBooking()
         {
             driver.FindElement(By.LinkText("Book")).Click();
 
+            // Destination
             var toDropdown = driver.FindElement(By.Id("toCode"));
             toDropdown.FindElement(By.XPath("//option[. = 'Winisk YMO']")).Click();
 
+            // Origin
             var fromDropdown = driver.FindElement(By.Id("fromCode"));
             fromDropdown.FindElement(By.XPath("//option[. = 'Teniente R. Marsh TNM']")).Click();
 
+            // Dates
             driver.FindElement(By.Id("dpb")).Click();
             driver.FindElement(By.CssSelector("tr:nth-child(6) > .day:nth-child(2)")).Click();
             driver.FindElement(By.Id("dpa")).Click();
             driver.FindElement(By.CssSelector("tr:nth-child(4) > .day:nth-child(6)")).Click();
 
+            // Passengers
             driver.FindElement(By.Id("passengers")).Click();
             driver.FindElement(By.XPath("//option[. = '2']")).Click();
 
+            // Select flights
             driver.FindElement(By.CssSelector(".btn-md")).Click();
             driver.FindElement(By.CssSelector(".row:nth-child(3) .block-flights-results-list-item:nth-child(6) .big-blue-radio")).Click();
             driver.FindElement(By.CssSelector(".row:nth-child(6) .block-flights-results-list-item:nth-child(6) .big-blue-radio")).Click();
 
             driver.FindElement(By.CssSelector(".btn")).Click();
 
+            // Cancel booking
             driver.FindElement(By.LinkText("Cancel")).Click();
 
             driver.FindElement(By.Id("passengers")).Click();

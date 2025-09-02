@@ -1,47 +1,61 @@
-﻿using OpenQA.Selenium;
-using InterfaceClass;
+﻿using NUnit.Framework;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 using WebAdapterClass;
-using NUnit.Framework;
+using Utilities;
 using System;
 
 namespace ScenerioClass
 {
-    /// <summary>
-    /// This class contains test scenarios for booking and canceling a flight.
-    /// </summary>
     [TestFixture]
-    public class ScenerioClass
+    public class ScenerioClassTests
     {
         private IWebDriver driver;
-        private IFlightSummary flightSummary;
+        private FlightSummary flightSummary;
 
         [SetUp]
         public void Setup()
         {
-            driver = new OpenQA.Selenium.Chrome.ChromeDriver();
+            driver = new ChromeDriver();
             flightSummary = new FlightSummary(driver);
             flightSummary.NavigateToUrl("http://localhost:3000/");
+        }
+
+        [TearDown]
+        public void Cleanup()
+        {
+            driver?.Quit();
+            driver?.Dispose();
         }
 
         [Test]
         public void BookFlightTest()
         {
-            flightSummary.PerformLogin("Varun", "@123varun#143");
-            flightSummary.BookFlight();
+            AssertionsHelper.AssertDoesNotThrow(() =>
+            {
+                flightSummary.PerformLogin("Varun", "@123varun#143");
+                flightSummary.BookFlight();
+            });
         }
 
         [Test]
         public void CheckPassengerNameTest()
         {
-            flightSummary.PerformLogin("Vijay", "Vijay");
-            flightSummary.checkPassengerName();
+            AssertionsHelper.AssertDoesNotThrow(() =>
+            {
+                flightSummary.PerformLogin("Vijay", "%2345rUN((");
+                flightSummary.checkPassengerName();
+            });
         }
 
         [Test]
         public void CheckCancelBookingTest()
         {
-            flightSummary.PerformLogin("Varun", "@123varun#143");
-            flightSummary.checkCancelBooking();
+            AssertionsHelper.AssertDoesNotThrow(() =>
+            {
+                flightSummary.PerformLogin("Varun", "@123varun#143");
+                flightSummary.checkCancelBooking();
+            });
         }
 
         [Test]
@@ -51,30 +65,9 @@ namespace ScenerioClass
             flightSummary.BookFlight();
 
             string expectedDestination = "Paris";
-            string actualDestination = "Hawaii"; // placeholder
+            string actualDestination = "Hawaii"; // Placeholder
 
-            Assert.AreNotEqual(expectedDestination, actualDestination, "Destination mismatch validation.");
-        }
-
-        [TearDown]
-        public void Cleanup()
-        {
-            if (driver != null)
-            {
-                try
-                {
-                    driver.Quit();   // Close browser windows
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine($"Error while quitting driver: {ex.Message}");
-                }
-                finally
-                {
-                    driver.Dispose(); // Explicitly dispose WebDriver instance
-                    driver = null;
-                }
-            }
+            AssertionsHelper.AssertIsFalse(expectedDestination == actualDestination, "Destination mismatch validation.");
         }
     }
 }

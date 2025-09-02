@@ -101,11 +101,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ascendion\\Documents\\ContosoAir_Automation\\InterfaceClass\\InterfaceClass.csproj",
+      "projectUniqueName": "C:\\Users\\Ascendion\\source\\repos\\Varun03Reddy\\ContosoAirAutomation\\InterfaceClass\\InterfaceClass.csproj",
       "projectName": "InterfaceClass",
-      "projectPath": "C:\\Users\\Ascendion\\Documents\\ContosoAir_Automation\\InterfaceClass\\InterfaceClass.csproj",
+      "projectPath": "C:\\Users\\Ascendion\\source\\repos\\Varun03Reddy\\ContosoAirAutomation\\InterfaceClass\\InterfaceClass.csproj",
       "packagesPath": "C:\\Users\\Ascendion\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ascendion\\Documents\\ContosoAir_Automation\\InterfaceClass\\obj\\",
+      "outputPath": "C:\\Users\\Ascendion\\source\\repos\\Varun03Reddy\\ContosoAirAutomation\\InterfaceClass\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -169,7 +169,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

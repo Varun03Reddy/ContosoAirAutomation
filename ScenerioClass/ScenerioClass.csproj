@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\InterfaceClass\InterfaceClass.csproj" />
+    <ProjectReference Include="..\Utilities\Utilities.csproj" />
     <ProjectReference Include="..\WebAdapterClass\WebAdapterClass.csproj" />
   </ItemGroup>
 

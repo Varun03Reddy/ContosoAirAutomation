@@ -1,12 +1,7 @@
-﻿
-
-using InterfaceClass;
+﻿using InterfaceClass;
 using OpenQA.Selenium;
+using Utilities;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace WebAdapterClass
 {
@@ -19,6 +14,7 @@ namespace WebAdapterClass
         /// The WebDriver instance used to control the browser.
         /// </summary>
         private readonly IWebDriver driver;
+        private readonly WebDriverHelper helper;
 
         /// <summary>
         /// Constructor to initialize the WebDriver.
@@ -27,6 +23,7 @@ namespace WebAdapterClass
         public LoginTest(IWebDriver driver)
         {
             this.driver = driver;
+            this.helper = new WebDriverHelper(driver);
         }
 
         /// <summary>
@@ -46,10 +43,10 @@ namespace WebAdapterClass
         /// <param name="password">The password for login.</param>
         public void PerformLoginWithCredentials(string username, string password)
         {
-            driver.FindElement(By.LinkText("Login")).Click();
-            driver.FindElement(By.Id("username")).SendKeys(username);
-            driver.FindElement(By.Id("password")).SendKeys(password);
-            driver.FindElement(By.CssSelector(".btn")).Click();
+            helper.ClickElement(By.LinkText("Login"));
+            helper.EnterText(By.Id("username"), username);
+            helper.EnterText(By.Id("password"), password);
+            helper.ClickElement(By.CssSelector(".btn"));
         }
 
         /// <summary>
@@ -57,16 +54,11 @@ namespace WebAdapterClass
         /// </summary>
         public void PerformLoginWithOutCredentials()
         {
-            // Click on the 'Login' link to navigate to the login form
-            driver.FindElement(By.LinkText("Login")).Click();
+            helper.ClickElement(By.LinkText("Login"));
+            helper.ClickElement(By.CssSelector(".btn"));
 
-            // Click the login button without entering any credentials
-            driver.FindElement(By.CssSelector(".btn")).Click();
-
-            // Optional: Capture the alert or validation message
-            var alertMessage = driver.FindElement(By.CssSelector(".alert > span")).Text;
+            var alertMessage = helper.GetText(By.CssSelector(".alert > span"));
             Console.WriteLine("Alert Message Displayed: " + alertMessage);
         }
-
     }
 }

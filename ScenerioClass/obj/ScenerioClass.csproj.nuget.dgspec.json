@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ascendion\\Documents\\ContosoAir_Automation\\ScenerioClass\\ScenerioClass.csproj": {}
+    "C:\\Users\\Ascendion\\source\\repos\\Varun03Reddy\\ContosoAirAutomation\\ScenerioClass\\ScenerioClass.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ascendion\\Documents\\ContosoAir_Automation\\InterfaceClass\\InterfaceClass.csproj": {
+    "C:\\Users\\Ascendion\\source\\repos\\Varun03Reddy\\ContosoAirAutomation\\InterfaceClass\\InterfaceClass.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ascendion\\Documents\\ContosoAir_Automation\\InterfaceClass\\InterfaceClass.csproj",
+        "projectUniqueName": "C:\\Users\\Ascendion\\source\\repos\\Varun03Reddy\\ContosoAirAutomation\\InterfaceClass\\InterfaceClass.csproj",
         "projectName": "InterfaceClass",
-        "projectPath": "C:\\Users\\Ascendion\\Documents\\ContosoAir_Automation\\InterfaceClass\\InterfaceClass.csproj",
+        "projectPath": "C:\\Users\\Ascendion\\source\\repos\\Varun03Reddy\\ContosoAirAutomation\\InterfaceClass\\InterfaceClass.csproj",
         "packagesPath": "C:\\Users\\Ascendion\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ascendion\\Documents\\ContosoAir_Automation\\InterfaceClass\\obj\\",
+        "outputPath": "C:\\Users\\Ascendion\\source\\repos\\Varun03Reddy\\ContosoAirAutomation\\InterfaceClass\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -75,18 +75,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Ascendion\\Documents\\ContosoAir_Automation\\ScenerioClass\\ScenerioClass.csproj": {
+    "C:\\Users\\Ascendion\\source\\repos\\Varun03Reddy\\ContosoAirAutomation\\ScenerioClass\\ScenerioClass.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ascendion\\Documents\\ContosoAir_Automation\\ScenerioClass\\ScenerioClass.csproj",
+        "projectUniqueName": "C:\\Users\\Ascendion\\source\\repos\\Varun03Reddy\\ContosoAirAutomation\\ScenerioClass\\ScenerioClass.csproj",
         "projectName": "ScenerioClass",
-        "projectPath": "C:\\Users\\Ascendion\\Documents\\ContosoAir_Automation\\ScenerioClass\\ScenerioClass.csproj",
+        "projectPath": "C:\\Users\\Ascendion\\source\\repos\\Varun03Reddy\\ContosoAirAutomation\\ScenerioClass\\ScenerioClass.csproj",
         "packagesPath": "C:\\Users\\Ascendion\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ascendion\\Documents\\ContosoAir_Automation\\ScenerioClass\\obj\\",
+        "outputPath": "C:\\Users\\Ascendion\\source\\repos\\Varun03Reddy\\ContosoAirAutomation\\ScenerioClass\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -107,11 +107,14 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Ascendion\\Documents\\ContosoAir_Automation\\InterfaceClass\\InterfaceClass.csproj": {
-                "projectPath": "C:\\Users\\Ascendion\\Documents\\ContosoAir_Automation\\InterfaceClass\\InterfaceClass.csproj"
+              "C:\\Users\\Ascendion\\source\\repos\\Varun03Reddy\\ContosoAirAutomation\\InterfaceClass\\InterfaceClass.csproj": {
+                "projectPath": "C:\\Users\\Ascendion\\source\\repos\\Varun03Reddy\\ContosoAirAutomation\\InterfaceClass\\InterfaceClass.csproj"
               },
-              "C:\\Users\\Ascendion\\Documents\\ContosoAir_Automation\\WebAdapterClass\\WebAdapterClass.csproj": {
-                "projectPath": "C:\\Users\\Ascendion\\Documents\\ContosoAir_Automation\\WebAdapterClass\\WebAdapterClass.csproj"
+              "C:\\Users\\Ascendion\\source\\repos\\Varun03Reddy\\ContosoAirAutomation\\Utilities\\Utilities.csproj": {
+                "projectPath": "C:\\Users\\Ascendion\\source\\repos\\Varun03Reddy\\ContosoAirAutomation\\Utilities\\Utilities.csproj"
+              },
+              "C:\\Users\\Ascendion\\source\\repos\\Varun03Reddy\\ContosoAirAutomation\\WebAdapterClass\\WebAdapterClass.csproj": {
+                "projectPath": "C:\\Users\\Ascendion\\source\\repos\\Varun03Reddy\\ContosoAirAutomation\\WebAdapterClass\\WebAdapterClass.csproj"
               }
             }
           }
@@ -177,18 +180,109 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Ascendion\\Documents\\ContosoAir_Automation\\WebAdapterClass\\WebAdapterClass.csproj": {
+    "C:\\Users\\Ascendion\\source\\repos\\Varun03Reddy\\ContosoAirAutomation\\Utilities\\Utilities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ascendion\\Documents\\ContosoAir_Automation\\WebAdapterClass\\WebAdapterClass.csproj",
-        "projectName": "WebAdapterClass",
-        "projectPath": "C:\\Users\\Ascendion\\Documents\\ContosoAir_Automation\\WebAdapterClass\\WebAdapterClass.csproj",
+        "projectUniqueName": "C:\\Users\\Ascendion\\source\\repos\\Varun03Reddy\\ContosoAirAutomation\\Utilities\\Utilities.csproj",
+        "projectName": "Utilities",
+        "projectPath": "C:\\Users\\Ascendion\\source\\repos\\Varun03Reddy\\ContosoAirAutomation\\Utilities\\Utilities.csproj",
         "packagesPath": "C:\\Users\\Ascendion\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ascendion\\Documents\\ContosoAir_Automation\\WebAdapterClass\\obj\\",
+        "outputPath": "C:\\Users\\Ascendion\\source\\repos\\Varun03Reddy\\ContosoAirAutomation\\Utilities\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Ascendion\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "DotNetSeleniumExtras.WaitHelpers": {
+              "target": "Package",
+              "version": "[3.11.0, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.14.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "Selenium.Support": {
+              "target": "Package",
+              "version": "[4.35.0, )"
+            },
+            "Selenium.WebDriver": {
+              "target": "Package",
+              "version": "[4.35.0, )"
+            },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Ascendion\\source\\repos\\Varun03Reddy\\ContosoAirAutomation\\WebAdapterClass\\WebAdapterClass.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Ascendion\\source\\repos\\Varun03Reddy\\ContosoAirAutomation\\WebAdapterClass\\WebAdapterClass.csproj",
+        "projectName": "WebAdapterClass",
+        "projectPath": "C:\\Users\\Ascendion\\source\\repos\\Varun03Reddy\\ContosoAirAutomation\\WebAdapterClass\\WebAdapterClass.csproj",
+        "packagesPath": "C:\\Users\\Ascendion\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ascendion\\source\\repos\\Varun03Reddy\\ContosoAirAutomation\\WebAdapterClass\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -209,8 +303,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Ascendion\\Documents\\ContosoAir_Automation\\InterfaceClass\\InterfaceClass.csproj": {
-                "projectPath": "C:\\Users\\Ascendion\\Documents\\ContosoAir_Automation\\InterfaceClass\\InterfaceClass.csproj"
+              "C:\\Users\\Ascendion\\source\\repos\\Varun03Reddy\\ContosoAirAutomation\\InterfaceClass\\InterfaceClass.csproj": {
+                "projectPath": "C:\\Users\\Ascendion\\source\\repos\\Varun03Reddy\\ContosoAirAutomation\\InterfaceClass\\InterfaceClass.csproj"
+              },
+              "C:\\Users\\Ascendion\\source\\repos\\Varun03Reddy\\ContosoAirAutomation\\Utilities\\Utilities.csproj": {
+                "projectPath": "C:\\Users\\Ascendion\\source\\repos\\Varun03Reddy\\ContosoAirAutomation\\Utilities\\Utilities.csproj"
               }
             }
           }
@@ -256,7 +353,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,11 +1,19 @@
 {
   "version": 2,
-  "dgSpecHash": "HI4CQFHf1VM=",
+  "dgSpecHash": "+7oF+XAWw5c=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ascendion\\Documents\\ContosoAir_Automation\\WebAdapterClass\\WebAdapterClass.csproj",
+  "projectFilePath": "C:\\Users\\Ascendion\\source\\repos\\Varun03Reddy\\ContosoAirAutomation\\WebAdapterClass\\WebAdapterClass.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Ascendion\\.nuget\\packages\\dotnetseleniumextras.waithelpers\\3.11.0\\dotnetseleniumextras.waithelpers.3.11.0.nupkg.sha512",
+    "C:\\Users\\Ascendion\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Ascendion\\.nuget\\packages\\netstandard.library\\2.0.0\\netstandard.library.2.0.0.nupkg.sha512",
+    "C:\\Users\\Ascendion\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\Ascendion\\.nuget\\packages\\nunit\\3.14.0\\nunit.3.14.0.nupkg.sha512",
     "C:\\Users\\Ascendion\\.nuget\\packages\\selenium.support\\4.35.0\\selenium.support.4.35.0.nupkg.sha512",
-    "C:\\Users\\Ascendion\\.nuget\\packages\\selenium.webdriver\\4.35.0\\selenium.webdriver.4.35.0.nupkg.sha512"
+    "C:\\Users\\Ascendion\\.nuget\\packages\\selenium.webdriver\\4.35.0\\selenium.webdriver.4.35.0.nupkg.sha512",
+    "C:\\Users\\Ascendion\\.nuget\\packages\\system.configuration.configurationmanager\\8.0.1\\system.configuration.configurationmanager.8.0.1.nupkg.sha512",
+    "C:\\Users\\Ascendion\\.nuget\\packages\\system.diagnostics.eventlog\\8.0.1\\system.diagnostics.eventlog.8.0.1.nupkg.sha512",
+    "C:\\Users\\Ascendion\\.nuget\\packages\\system.security.cryptography.protecteddata\\8.0.0\\system.security.cryptography.protecteddata.8.0.0.nupkg.sha512"
   ],
   "logs": []
 }

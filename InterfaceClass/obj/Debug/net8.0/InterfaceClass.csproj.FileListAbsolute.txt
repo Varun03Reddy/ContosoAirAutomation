@@ -11,3 +11,16 @@ C:\Users\Ascendion\Documents\ContosoAir_Automation\InterfaceClass\obj\Debug\net8
 C:\Users\Ascendion\Documents\ContosoAir_Automation\InterfaceClass\obj\Debug\net8.0\InterfaceClass.pdb
 C:\Users\Ascendion\Documents\ContosoAir_Automation\InterfaceClass\obj\Debug\net8.0\ref\InterfaceClass.dll
 C:\Users\Ascendion\Documents\ContosoAir_Automation\InterfaceClass\obj\Debug\net8.0\InterfaceClass.csproj.AssemblyReference.cache
+C:\Users\Ascendion\source\repos\Varun03Reddy\ContosoAirAutomation\InterfaceClass\bin\Debug\net8.0\InterfaceClass.deps.json
+C:\Users\Ascendion\source\repos\Varun03Reddy\ContosoAirAutomation\InterfaceClass\bin\Debug\net8.0\InterfaceClass.dll
+C:\Users\Ascendion\source\repos\Varun03Reddy\ContosoAirAutomation\InterfaceClass\bin\Debug\net8.0\InterfaceClass.pdb
+C:\Users\Ascendion\source\repos\Varun03Reddy\ContosoAirAutomation\InterfaceClass\obj\Debug\net8.0\InterfaceClass.csproj.AssemblyReference.cache
+C:\Users\Ascendion\source\repos\Varun03Reddy\ContosoAirAutomation\InterfaceClass\obj\Debug\net8.0\InterfaceClass.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ascendion\source\repos\Varun03Reddy\ContosoAirAutomation\InterfaceClass\obj\Debug\net8.0\InterfaceClass.AssemblyInfoInputs.cache
+C:\Users\Ascendion\source\repos\Varun03Reddy\ContosoAirAutomation\InterfaceClass\obj\Debug\net8.0\InterfaceClass.AssemblyInfo.cs
+C:\Users\Ascendion\source\repos\Varun03Reddy\ContosoAirAutomation\InterfaceClass\obj\Debug\net8.0\InterfaceClass.csproj.CoreCompileInputs.cache
+C:\Users\Ascendion\source\repos\Varun03Reddy\ContosoAirAutomation\InterfaceClass\obj\Debug\net8.0\InterfaceClass.sourcelink.json
+C:\Users\Ascendion\source\repos\Varun03Reddy\ContosoAirAutomation\InterfaceClass\obj\Debug\net8.0\InterfaceClass.dll
+C:\Users\Ascendion\source\repos\Varun03Reddy\ContosoAirAutomation\InterfaceClass\obj\Debug\net8.0\refint\InterfaceClass.dll
+C:\Users\Ascendion\source\repos\Varun03Reddy\ContosoAirAutomation\InterfaceClass\obj\Debug\net8.0\InterfaceClass.pdb
+C:\Users\Ascendion\source\repos\Varun03Reddy\ContosoAirAutomation\InterfaceClass\obj\Debug\net8.0\ref\InterfaceClass.dll
