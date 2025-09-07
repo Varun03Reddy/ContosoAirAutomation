@@ -17,20 +17,20 @@ namespace ScenerioClass
             // 🔹 Use DriverFactory instead of hardcoding ChromeDriver
             driver = DriverFactory.CreateDriver("chrome");
             homepage = new Homepage(driver);
-            homepage.NavigateToUrl("http://localhost:3000/");
+            homepage.NavigateToUrl("http://contosoairline.southindia.cloudapp.azure.com:3000/");
         }
 
         [Test]
         public void getLogo()
         {
-            homepage.PerformLogin("Vijay", "Vijay");
+            homepage.PerformLogin("Vamsi", "Vamsi@134");
             Assert.DoesNotThrow(() => homepage.getLogo(), "Logo image is not displayed using Relative XPath.");
         }
 
         [Test]
         public void getTitle()
         {
-            homepage.PerformLogin("Vijay", "Vijay");
+            homepage.PerformLogin("Vamsi", "Vamsi@134");
             string actual = homepage.getTitle();
             Assert.That(actual, Is.EqualTo("Where do you\r\nwant to go?"));
         }
@@ -38,7 +38,7 @@ namespace ScenerioClass
         [Test]
         public void GetSubtitle()
         {
-            homepage.PerformLogin("Vijay", "Vijay");
+            homepage.PerformLogin("Varun Reddy", "Varun@13456");
             string actualSubtitle = homepage.subTitle();
             Assert.That(actualSubtitle, Is.EqualTo("Flight deals"));
         }
@@ -46,7 +46,7 @@ namespace ScenerioClass
         [Test]
         public void GetSuggestedTitle()
         {
-            homepage.PerformLogin("Vijay", "Vijay");
+            homepage.PerformLogin("Vamsi", "Vamsi@134");
             string actualSuggestedTitle = homepage.getSuggestTitle();
             Assert.That(actualSuggestedTitle, Is.EqualTo("Recommended for you"));
         }
@@ -54,14 +54,14 @@ namespace ScenerioClass
         [Test]
         public void checkHawaiiImage()
         {
-            homepage.PerformLogin("Vijay", "Vijay");
+            homepage.PerformLogin("Vamsi", "Vamsi@134");
             Assert.DoesNotThrow(() => homepage.checkHawaiiImage(), "Hawaii image is not displayed using Relative XPath.");
         }
 
         [Test]
         public void checkHawaiiCaption()
         {
-            homepage.PerformLogin("Vijay", "Vijay");
+            homepage.PerformLogin("Vamsi", "Vamsi@134");
             string actualName = homepage.checkHawaiiCaption();
             Assert.That(actualName, Is.EqualTo("Hawaii"));
         }
@@ -76,7 +76,7 @@ namespace ScenerioClass
         [Test]
         public void checkParisCaption()
         {
-            homepage.PerformLogin("Vijay", "Vijay");
+            homepage.PerformLogin("Vamsi", "Vamsi@134");
             string actualName = homepage.checkParisCaption();
             Assert.That(actualName, Is.EqualTo("Paris"));
         }
@@ -84,14 +84,14 @@ namespace ScenerioClass
         [Test]
         public void checkBarcelonaImage()
         {
-            homepage.PerformLogin("Vijay", "Vijay");
+            homepage.PerformLogin("Vamsi", "Vamsi@134");
             Assert.DoesNotThrow(() => homepage.checkBarcelonaImage(), "Barcelona image is not displayed using Relative XPath.");
         }
 
         [Test]
         public void checkBarcelonaCaption()
         {
-            homepage.PerformLogin("Vijay", "Vijay");
+            homepage.PerformLogin("Vamsi", "Vamsi@134");
             string actualName = homepage.checkBarcelonaCaption();
             Assert.That(actualName, Is.EqualTo("Barcelona"));
         }
@@ -99,7 +99,7 @@ namespace ScenerioClass
         [Test]
         public void PerformLoginTest()
         {
-            Assert.DoesNotThrow(() => homepage.PerformLogin("Vijay", "Vijay"));
+            Assert.DoesNotThrow(() => homepage.PerformLogin("Vamsi", "Vamsi@134"));
         }
 
         [TearDown]

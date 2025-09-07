@@ -27,12 +27,12 @@ namespace ScenerioClass
         public void Test_Flight_Search_With_Login()
         {
             string username = "testuser";
-            string password = "testpassword";
+            string password = "varun@2341";
             string from = "Anchorage ANC";
             string to = "Abakan ABA";
-            DateTime departureDate = new DateTime(2024, 12, 20);
+            DateTime departureDate = new DateTime(2025, 12, 20);
             int passengers = 1;
-            DateTime returnDate = new DateTime(2024, 12, 25);
+            DateTime returnDate = new DateTime(2025, 12, 25);
 
             flightListingPage.Login(username, password);
             flightListingPage.SearchFlights(from, to, departureDate, passengers, returnDate);
@@ -43,13 +43,13 @@ namespace ScenerioClass
         [Test]
         public void Test_Flight_Listings_Are_Not_Empty()
         {
-            string username = "testuser";
-            string password = "testpassword";
+            string username = "reddy";
+            string password = "varun@5!@!";
             string from = "Anchorage ANC";
             string to = "Abakan ABA";
-            DateTime departureDate = new DateTime(2024, 12, 20);
+            DateTime departureDate = new DateTime(2025, 12, 20);
             int passengers = 1;
-            DateTime returnDate = new DateTime(2024, 12, 25);
+            DateTime returnDate = new DateTime(2025, 12, 25);
 
             flightListingPage.Login(username, password);
             flightListingPage.SearchFlights(from, to, departureDate, passengers, returnDate);

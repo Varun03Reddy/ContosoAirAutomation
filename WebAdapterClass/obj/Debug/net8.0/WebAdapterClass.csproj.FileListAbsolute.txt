@@ -32,3 +32,5 @@ C:\Users\Ascendion\source\repos\Varun03Reddy\ContosoAirAutomation\WebAdapterClas
 C:\Users\Ascendion\source\repos\Varun03Reddy\ContosoAirAutomation\WebAdapterClass\obj\Debug\net8.0\ref\WebAdapterClass.dll
 C:\Users\Ascendion\source\repos\Varun03Reddy\ContosoAirAutomation\WebAdapterClass\bin\Debug\net8.0\Utilities.dll
 C:\Users\Ascendion\source\repos\Varun03Reddy\ContosoAirAutomation\WebAdapterClass\bin\Debug\net8.0\Utilities.pdb
+C:\Users\Ascendion\Documents\ContosoAir_Automation\WebAdapterClass\bin\Debug\net8.0\Utilities.dll
+C:\Users\Ascendion\Documents\ContosoAir_Automation\WebAdapterClass\bin\Debug\net8.0\Utilities.pdb

@@ -27,7 +27,7 @@ namespace ScenerioClass
         [Test]
         public void FlightBooking_ValidLogin()
         {
-            flightBookingPage.Login("athesh", "athesh");
+            flightBookingPage.Login("vamsi", "Vamsi@143123#");
             flightBookingPage.SelectFlightDetails("Seisia ABM", "Egg Harbor City ACY", new DateTime(2025, 12, 20), 1, new DateTime(2025, 12, 25));
             flightBookingPage.BookFlight();
             flightBookingPage.Close();
@@ -36,7 +36,7 @@ namespace ScenerioClass
         [Test]
         public void FlightBooking_SinglePassenger()
         {
-            flightBookingPage.Login("athesh", "athesh");
+            flightBookingPage.Login("Arpita", "arpita@1234@#$%^");
             flightBookingPage.SelectFlightDetails("Seisia ABM", "Egg Harbor City ACY", new DateTime(2024, 12, 20), 1, new DateTime(2024, 12, 25));
             flightBookingPage.BookFlight();
 
@@ -49,8 +49,8 @@ namespace ScenerioClass
         [Test]
         public void FlightBooking_MultiplePassengers()
         {
-            flightBookingPage.Login("athesh", "athesh");
-            flightBookingPage.SelectFlightDetails("Seisia ABM", "Egg Harbor City ACY", new DateTime(2024, 12, 20), 3, new DateTime(2024, 12, 25));
+            flightBookingPage.Login("keyur", "keyur@456#");
+            flightBookingPage.SelectFlightDetails("Seisia ABM", "Egg Harbor City ACY", new DateTime(2025, 12, 20), 3, new DateTime(2025, 12, 25));
             flightBookingPage.BookFlight();
 
             var actual = SeleniumHelpers.WaitForElement(driver, By.CssSelector(".block-booking-title")).Text;
@@ -62,8 +62,8 @@ namespace ScenerioClass
         [Test]
         public void FlightBooking_Passengers()
         {
-            flightBookingPage.Login("athesh", "athesh");
-            flightBookingPage.SelectFlightDetails("Seisia ABM", "Egg Harbor City ACY", new DateTime(2024, 12, 20), 3, new DateTime(2024, 12, 25));
+            flightBookingPage.Login("Varun Reddy", "vgg@544");
+            flightBookingPage.SelectFlightDetails("Seisia ABM", "Egg Harbor City ACY", new DateTime(2025, 12, 20), 3, new DateTime(2025, 12, 25));
             flightBookingPage.BookFlight();
 
             var actual = SeleniumHelpers.WaitForElement(driver, By.CssSelector(".block-booking-title")).Text;
@@ -75,7 +75,7 @@ namespace ScenerioClass
         [Test]
         public void FlightBooking_DifferentDestinations()
         {
-            flightBookingPage.Login("athesh", "athesh");
+            flightBookingPage.Login("Varun Reddy", "vgg@544");
             flightBookingPage.SelectFlightDetails("New York JFK", "Los Angeles LAX", new DateTime(2025, 12, 20), 2, new DateTime(2025, 12, 25));
             flightBookingPage.BookFlight();
 
@@ -88,7 +88,7 @@ namespace ScenerioClass
         [Test]
         public void FlightBooking_ReturnDateLaterThanDepartureDate()
         {
-            flightBookingPage.Login("athesh", "athesh");
+            flightBookingPage.Login("vamsi", "ava23@h");
             flightBookingPage.SelectFlightDetails("Seisia ABM", "Egg Harbor City ACY", new DateTime(2025, 12, 20), 2, new DateTime(2025, 12, 25));
             flightBookingPage.BookFlight();
 
@@ -101,7 +101,7 @@ namespace ScenerioClass
         [Test]
         public void FlightBooking_PassengerDropdown_ShouldContainValidValues()
         {
-            flightBookingPage.Login("athesh", "athesh");
+            flightBookingPage.Login("Varun", "varun@1432435#");
             SeleniumHelpers.ClickElement(driver, By.LinkText("Book"));
 
             var passengerDropdown = new SelectElement(SeleniumHelpers.WaitForElement(driver, By.Id("passengers")));

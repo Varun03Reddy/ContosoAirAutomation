@@ -21,7 +21,7 @@ namespace ScenerioClass
         public void TestViewBookedFlights()
         {
             _flightHistory.NavigateToLoginPage();
-            _flightHistory.Login("test_user", "test_password");
+            _flightHistory.Login("test_user", "@varun#");
 
             _flightHistory.NavigateToMyBookedFlightsPage();
 
@@ -33,7 +33,7 @@ namespace ScenerioClass
         public void TestViewFlightDetails()
         {
             _flightHistory.NavigateToLoginPage();
-            _flightHistory.Login("test_user", "test_password");
+            _flightHistory.Login("Varun Reddy", "vgg@544");
 
             _flightHistory.NavigateToMyBookedFlightsPage();
 
@@ -50,7 +50,7 @@ namespace ScenerioClass
         public void TestShopForAnotherFlight()
         {
             _flightHistory.NavigateToLoginPage();
-            _flightHistory.Login("test_user", "test_password");
+            _flightHistory.Login("test_user", "@varun#");
 
             _flightHistory.NavigateToMyBookedFlightsPage();
 
@@ -64,7 +64,7 @@ namespace ScenerioClass
         public void TestGetAnotherFlight()
         {
             _flightHistory.NavigateToLoginPage();
-            _flightHistory.Login("Vijay", "Vijay");
+            _flightHistory.Login("Varun Reddy", "vgg@544");
 
             _flightHistory.NavigateToMyBookedFlightsPage();
 

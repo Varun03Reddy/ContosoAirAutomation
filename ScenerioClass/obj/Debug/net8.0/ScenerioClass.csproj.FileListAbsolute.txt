@@ -226,3 +226,11 @@ C:\Users\Ascendion\source\repos\Varun03Reddy\ContosoAirAutomation\ScenerioClass\
 C:\Users\Ascendion\source\repos\Varun03Reddy\ContosoAirAutomation\ScenerioClass\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
 C:\Users\Ascendion\source\repos\Varun03Reddy\ContosoAirAutomation\ScenerioClass\bin\Debug\net8.0\Utilities.dll
 C:\Users\Ascendion\source\repos\Varun03Reddy\ContosoAirAutomation\ScenerioClass\bin\Debug\net8.0\Utilities.pdb
+C:\Users\Ascendion\Documents\ContosoAir_Automation\ScenerioClass\bin\Debug\net8.0\SeleniumExtras.WaitHelpers.dll
+C:\Users\Ascendion\Documents\ContosoAir_Automation\ScenerioClass\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+C:\Users\Ascendion\Documents\ContosoAir_Automation\ScenerioClass\bin\Debug\net8.0\System.Diagnostics.EventLog.dll
+C:\Users\Ascendion\Documents\ContosoAir_Automation\ScenerioClass\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Ascendion\Documents\ContosoAir_Automation\ScenerioClass\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.Messages.dll
+C:\Users\Ascendion\Documents\ContosoAir_Automation\ScenerioClass\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
+C:\Users\Ascendion\Documents\ContosoAir_Automation\ScenerioClass\bin\Debug\net8.0\Utilities.dll
+C:\Users\Ascendion\Documents\ContosoAir_Automation\ScenerioClass\bin\Debug\net8.0\Utilities.pdb

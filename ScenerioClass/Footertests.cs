@@ -16,7 +16,7 @@ namespace ScenarioClass
         public void Setup()
         {
             driver = DriverFactory.CreateDriver("chrome");
-            driver.Navigate().GoToUrl("http://localhost:3000");
+            driver.Navigate().GoToUrl("http://contosoairline.southindia.cloudapp.azure.com:3000/");
             driver.Manage().Window.Maximize();
             footer = new FooterPage(driver);
         }

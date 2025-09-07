@@ -7,7 +7,7 @@ namespace Utilities
     /// </summary>
     public static class ConfigManager
     {
-        public static string BaseUrl => GetConfig("BaseUrl", "http://localhost:3000");
+        public static string BaseUrl => GetConfig("BaseUrl", "http://contosoairline.southindia.cloudapp.azure.com:3000/");
         public static string Browser => GetConfig("Browser", "chrome");
         public static string Username => GetConfig("Username", "testuser");
         public static string Password => GetConfig("Password", "password123");
@@ -30,7 +30,7 @@ namespace Utilities
         {
             string url = ConfigurationManager.AppSettings["AppUrl"];
             if (string.IsNullOrEmpty(url))
-                url = "http://localhost:3000/";   // fallback
+                url = "http://contosoairline.southindia.cloudapp.azure.com:3000/";   // fallback
             return url;
         }
     }
