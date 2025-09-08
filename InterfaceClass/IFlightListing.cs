@@ -1,4 +1,9 @@
-﻿
+﻿/*
+ * Copyright (c) 2025 Arpita
+ * All rights reserved.
+ *
+ * This source code is licensed under the terms specified by the owner.
+ */
 using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;

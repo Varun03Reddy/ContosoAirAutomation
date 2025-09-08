@@ -1,36 +1,57 @@
-﻿using NUnit.Framework;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using WebAdapterClass;
-using Utilities;
+﻿/*
+ * Copyright (c) 2025 Varun Reddy
+ * All rights reserved.
+ *
+ * This source code is licensed under the terms specified by the owner.
+ */
+using NUnit.Framework; // NUnit framework for test attributes and assertions
+using OpenQA.Selenium; // Selenium WebDriver for browser automation
+using OpenQA.Selenium.Chrome; // ChromeDriver for Selenium
+using WebAdapterClass; // Page objects and implementations
+using Utilities; // ✅ Utilities: AssertionsHelper, ConfigManager, DriverFactory
 using System;
 
 namespace ScenerioClass
 {
-    [TestFixture]
+    [TestFixture] // Marks this class as a test fixture for NUnit
     public class ScenerioClassTests
     {
-        private IWebDriver driver;
-        private FlightSummary flightSummary;
+        private IWebDriver driver; // DIP: Use WebDriver abstraction
+        private FlightSummary flightSummary; // SRP: Page object for flight summary actions
 
-        [SetUp]
+        [SetUp] // Runs before each test case
         public void Setup()
         {
-            driver = new ChromeDriver();
+            // ✅ Get browser type from ConfigManager (default = chrome)
+            string browser = ConfigManager.Browser;
+            driver = DriverFactory.CreateDriver(browser);
+
+            // ✅ Initialize Page Object
             flightSummary = new FlightSummary(driver);
-            flightSummary.NavigateToUrl("http://localhost:3000/");
+
+            // ✅ Get app URL from ConfigManager instead of hardcoding
+            string appUrl = ConfigManager.GetAppUrl();
+            flightSummary.NavigateToUrl(appUrl);
+
+            // ✅ Maximize browser for stable UI testing
+            driver.Manage().Window.Maximize();
+
+            // ✅ Explicit wait: ensure body is visible
+            var waitHelper = new WaitHelper(driver, 10);
+            waitHelper.WaitForElementVisible(By.TagName("body"));
         }
 
-        [TearDown]
+        [TearDown] // Runs after each test case
         public void Cleanup()
         {
-            driver?.Quit();
+            driver?.Quit(); // SRP: Responsible only for cleanup of resources
             driver?.Dispose();
         }
 
-        [Test]
+        [Test] // Test case: Book a flight
         public void BookFlightTest()
         {
+            // Ensure no exceptions occur during login and booking
             AssertionsHelper.AssertDoesNotThrow(() =>
             {
                 flightSummary.PerformLogin("Varun", "@123varun#143");
@@ -38,7 +59,7 @@ namespace ScenerioClass
             });
         }
 
-        [Test]
+        [Test] // Test case: Check passenger name in flight summary
         public void CheckPassengerNameTest()
         {
             AssertionsHelper.AssertDoesNotThrow(() =>
@@ -48,7 +69,7 @@ namespace ScenerioClass
             });
         }
 
-        [Test]
+        [Test] // Test case: Check cancel booking functionality
         public void CheckCancelBookingTest()
         {
             AssertionsHelper.AssertDoesNotThrow(() =>
@@ -58,15 +79,16 @@ namespace ScenerioClass
             });
         }
 
-        [Test]
+        [Test] // Test case: Validate flight purchase details
         public void CheckPurchaseTest()
         {
             flightSummary.PerformLogin("Varun", "@123varun#143");
             flightSummary.BookFlight();
 
-            string expectedDestination = "Paris";
-            string actualDestination = "Hawaii"; // Placeholder
+            string expectedDestination = "Paris"; // Expected destination after booking
+            string actualDestination = "Hawaii"; // Placeholder: Actual value should come from page
 
+            // Validate that the expected destination does not match the actual
             AssertionsHelper.AssertIsFalse(expectedDestination == actualDestination, "Destination mismatch validation.");
         }
     }

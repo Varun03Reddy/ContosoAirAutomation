@@ -1,41 +1,49 @@
-﻿using NUnit.Framework;
-using WebAdapterClass;
-using InterfaceClass;
-using Utilities; // ✅ Added Utilities
+﻿/*
+ * Copyright (c) 2025 Vamsi Krishna
+ * All rights reserved.
+ *
+ * This source code is licensed under the terms specified by the owner.
+ */
+using NUnit.Framework; // NUnit framework for defining and running test cases
+using WebAdapterClass; // Implementation of IFlightDeal interface
+using InterfaceClass; // Interface segregation: IFlightDeal contains only flight deal related methods
+using Utilities; // Helper utilities like AssertionsHelper for cleaner assertions
 
 namespace ScenerioClass
 {
-    [TestFixture]
+    [TestFixture] // Marks this class as an NUnit test fixture
     public class FlightDealTests
     {
-        private IFlightDeal flightdeal;
+        private IFlightDeal flightdeal; // DIP: Depend on interface, not concrete implementation
 
-        [SetUp]
+        [SetUp] // Runs before each test
         public void SetUp()
         {
-            flightdeal = new FlightDeal();
+            flightdeal = new FlightDeal(); // LSP: Any class implementing IFlightDeal can be used
         }
 
-        [TearDown]
+        [TearDown] // Runs after each test to clean up resources
         public void TearDown()
         {
-            flightdeal.Close();
+            flightdeal.Close(); // SRP: Encapsulates cleanup of flight deal session/browser
         }
 
-        [Test]
+        [Test] // Test: Validate the page title for the flight deals page
         public void GetTitle()
         {
-            flightdeal.PerformLogin("admin", "admin");
-            string expectedSubtitle = "Flight deals";
-            string actualSubtitle = flightdeal.Title();
+            flightdeal.PerformLogin("admin", "admin"); // SRP: Login encapsulated in the interface
 
-            AssertionsHelper.AssertEqual(expectedSubtitle, actualSubtitle); // ✅ use helper
+            string expectedSubtitle = "Flight deals"; // Expected title for validation
+            string actualSubtitle = flightdeal.Title(); // Actual title fetched from the page
+
+            // Assert using centralized helper for consistency
+            AssertionsHelper.AssertEqual(expectedSubtitle, actualSubtitle);
         }
 
-        [Test]
+        [Test] // Test: Validate each flight box's source and destination
         public void TestBoxSourceToDestination()
         {
-            flightdeal.PerformLogin("admin", "admin");
+            flightdeal.PerformLogin("admin", "admin"); // Perform login before checking deals
 
             string expectedSource = "Seattle (SEA)";
             var expectedDestinations = new[]
@@ -46,18 +54,22 @@ namespace ScenerioClass
                 "to Hounslow (LHR)"
             };
 
+            // Loop through each flight deal box
             for (int i = 0; i < expectedDestinations.Length; i++)
             {
+                // Get actual source and destination for the i-th box
                 var (actualSource, actualDest) = flightdeal.BoxSourceToDestination(i + 1);
+
+                // Validate source and destination
                 AssertionsHelper.AssertEqual(expectedSource, actualSource);
                 AssertionsHelper.AssertEqual(expectedDestinations[i], actualDest);
             }
         }
 
-        [Test]
+        [Test] // Test: Validate the end/purchase date for each flight deal box
         public void TestBoxEndDates()
         {
-            flightdeal.PerformLogin("admin", "admin");
+            flightdeal.PerformLogin("admin", "admin"); // Login first
 
             var expectedEndDates = new[]
             {
@@ -67,6 +79,7 @@ namespace ScenerioClass
                 "Purchase by Feb 13th 2017"
             };
 
+            // Loop through each box to validate the end date
             for (int i = 0; i < expectedEndDates.Length; i++)
             {
                 string actualEndDate = flightdeal.BoxEndDate(i + 1);
@@ -74,24 +87,27 @@ namespace ScenerioClass
             }
         }
 
-        [Test]
+        [Test] // Test: Validate description text (including price) for each flight deal box
         public void TestBoxDescriptions()
         {
-            flightdeal.PerformLogin("admin", "admin");
+            flightdeal.PerformLogin("admin", "admin"); // Login before validation
 
-            var prices = new[] { 479, 528, 535, 626 };
+            var prices = new[] { 479, 528, 535, 626 }; // Expected prices for each deal box
 
+            // Loop through each box to validate the description
             for (int i = 0; i < prices.Length; i++)
             {
                 string expectedDescription = $"From $ {prices[i]} ONE WAY";
 
+                // Normalize actual description from the page
                 string actualDescription = flightdeal.BoxDescription(i + 1)
-                    .Replace("\r\n", " ")
+                    .Replace("\r\n", " ") // Remove line breaks
                     .Trim()
                     .ToLower();
 
                 string normalizedExpectedDescription = expectedDescription.ToLower().Trim();
 
+                // Assertion using centralized helper
                 AssertionsHelper.AssertEqual(normalizedExpectedDescription, actualDescription);
             }
         }

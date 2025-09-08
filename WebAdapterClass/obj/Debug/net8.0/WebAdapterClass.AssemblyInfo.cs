@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WebAdapterClass")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+719a16b9109622c92146976e0eeb4d762876b206")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+72ae32defcd7e77a88e24cfad9e6fd91b1a41042")]
 [assembly: System.Reflection.AssemblyProductAttribute("WebAdapterClass")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WebAdapterClass")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

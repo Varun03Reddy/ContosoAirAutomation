@@ -1,4 +1,9 @@
-﻿
+﻿/*
+ * Copyright (c) 2025 Keyur
+ * All rights reserved.
+ *
+ * This source code is licensed under the terms specified by the owner.
+ */
 using System;
 using System.Collections.Generic;
 using System.Linq;
